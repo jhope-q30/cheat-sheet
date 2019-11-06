@@ -36,8 +36,8 @@ sudo usermod -a -G www-data ubuntu
 
 git
 
-git remote add origin https://github.com/jhope-q30/0000-test.git
-git push -u origin master
+git remote add origin https://github.com/jhope-q30/0000-test.git\n
+git push -u origin master\n
 git pull --allow-unrelated-histories
 
 Drupal
