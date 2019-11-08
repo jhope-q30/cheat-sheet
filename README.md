@@ -1,41 +1,41 @@
 # cheat-sheet
 dev cheat sheet
 
-Linux
+## Linux
 
-// Extract archive 
+**Extract archive**
 
 tar -zcvf SOURCE.tar.gz /DEST
 
-// Watchers
+**Watchers**
 
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
-// Replace spaces
+**Replace spaces**
 
 for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done
 
-Mysql
+## Mysql
 
-// export
+**export**
 
 mysqldump --add-drop-table -u root -p DATABASE > DATABASE.sql
 
-// import
+**import**
 
 mysql -u root -p DATABASE < DATABASE.sql
 
-// quick string replace
+**quick string replace**
 
 sed 's/OLD ADDRESS/NEW ADDRESS/g' DATABASE.sql > UPDATED.sql
 
-Permissions ( AWS )
+## Permissions ( AWS )
 
 sudo usermod -a -G ubuntu www-data
 
 sudo usermod -a -G www-data ubuntu
 
-git
+## git
 
 git remote add origin https://github.com/jhope-q30/0000-test.git
 
@@ -44,14 +44,18 @@ git push -u origin master
 git pull --allow-unrelated-histories
 
 
-Drupal
+## Drupal
 
 admin login - drush uli
 update config - drush -y cim
 
-Wordpress
+## Wordpress
 
-// remove revisions
+**remove revisions**
 
 DELETE from wp_posts WHERE post_type = "revision";
+
+## MongoDB
+
+mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
