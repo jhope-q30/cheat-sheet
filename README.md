@@ -1,6 +1,24 @@
 # cheat-sheet
 dev cheat sheet
 
+## Breakpoints
+
+$tiny-screen: 300px;
+$small-screen-min: 463px;
+$small-screen: 464px;
+$small-screen-max: 607px;
+$narrow-screen: 608px;
+$narrow-screen-max: 767px;
+$weird-screen: 768px;
+$weird-screen-max: 895px;
+$medium-screen: 896px;
+$medium-screen-max: 991px;
+$standard-screen: 992px;
+$standard-screen-max: 1307px;
+$wide-screen: 1308px;
+$wide-screen-max: 1407px;
+$super-wide-screen: 1408px;
+
 ## Linux
 
 **Extract archive**
