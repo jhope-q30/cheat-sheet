@@ -26,6 +26,7 @@ $medium-screen-max: 991px;
 $standard-screen: 992px;
 
 $standard-screen-max: 1307px;
+
 $wide-screen: 1308px;
 
 $wide-screen-max: 1407px;
