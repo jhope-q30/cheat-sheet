@@ -93,3 +93,9 @@ DELETE from wp_posts WHERE post_type = "revision";
 
 mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
+## Apache2
+
+List running instances
+
+apache2ctl -S
+
