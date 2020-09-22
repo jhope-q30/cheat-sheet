@@ -18,3 +18,21 @@
 @mixin x-rotate (){ transform: rotate( 180deg ) 0.3s ease-out; }
 ```
 
+
+#Resets
+
+```
+/// reset list
+@mixin reset-list() {
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:block;
+  li {
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:block;
+  }
+}
+```
