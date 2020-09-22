@@ -23,16 +23,16 @@
 
 ```
 /// reset list
-@mixin reset-list() {
+@mixin reset-list( $display:false ) {
   margin:0;
   padding:0;
   list-style:none;
-  display:block;
+  @if $display { display:$display; }
   li {
     margin:0;
     padding:0;
     list-style:none;
-    display:block;
+    @if $display { display:$display; }
   }
 }
 ```
