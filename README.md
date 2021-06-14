@@ -89,6 +89,19 @@ update config - drush -y cim
 
 DELETE from wp_posts WHERE post_type = "revision";
 
+**direct access to update wordpress from system**
+
+define('FS_METHOD', 'direct');
+
+**wp cli**
+
+cd public_html
+sudo -u www-data wp core download
+
+sudo -u www-data wp core config --dbname='wordpress' --dbuser='wpuser' --dbpass='password' --dbhost='localhost' --dbprefix='wp_'
+
+sudo -u www-data wp core install --url='https://wordpress.localhost.com' --title='Default Wordpress Theme' --admin_user='default' --admin_password='defaultq30' --admin_email='email@domain.com'
+
 ## MongoDB
 
 mongo --eval 'db.runCommand({ connectionStatus: 1 })'
