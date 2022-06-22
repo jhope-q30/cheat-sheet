@@ -64,6 +64,7 @@ mysql -u root -p DATABASE < DATABASE.sql
 **quick string replace**
 
 sed 's/OLD ADDRESS/NEW ADDRESS/g' DATABASE.sql > UPDATED.sql
+
 sed 's/<img[^>]\+>//g' temp.html > temp1.html
 
 ## Permissions ( AWS )
