@@ -59,9 +59,12 @@ mysqldump --add-drop-table -u root -p DATABASE > DATABASE.sql
 
 mysql -u root -p DATABASE < DATABASE.sql
 
+## sed
+
 **quick string replace**
 
 sed 's/OLD ADDRESS/NEW ADDRESS/g' DATABASE.sql > UPDATED.sql
+sed 's/<img[^>]\+>//g' temp.html > temp1.html
 
 ## Permissions ( AWS )
 
