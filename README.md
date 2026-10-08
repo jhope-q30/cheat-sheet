@@ -69,9 +69,9 @@ sed 's/<img[^>]\+>//g' temp.html > temp1.html
 
 ## Permissions ( AWS )
 
-sudo usermod -a -G ubuntu www-data
+sudo usermod -a -G $USER www-data
 
-sudo usermod -a -G www-data ubuntu
+sudo usermod -a -G www-data $USER
 
 ## git
 
@@ -80,7 +80,6 @@ git remote add origin https://github.com/jhope-q30/0000-test.git
 git push -u origin master
 
 git pull --allow-unrelated-histories
-
 
 ## Drupal
 
@@ -115,4 +114,19 @@ mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 List running instances
 
 apache2ctl -S
+
+## dev/change files with www-data ownership
+
+sudo usermod -aG www-data $USER
+
+### Ensure everything is owned by www-data
+sudo chown -R www-data:www-data /path/to/your/project
+
+### Give the group write permissions to all files and folders
+sudo chmod -R g+rw /path/to/your/project
+
+### Ensure folders can be opened/traversed by the group
+sudo find /path/to/your/project -type d -exec chmod g+x {} +
+
+
 
